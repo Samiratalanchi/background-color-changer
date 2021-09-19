@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <button id="colorChanger">Click me</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 id="colorValue">Nothing</h2>
+            </td>
+        </tr>
+    </table>
+    <script>
+        // get by querySelector
+        var back= document.querySelector("body");
+        // get by id value
+        var button= document.getElementById("colorChanger");
+        var label= document.getElementById("colorValue");
+
+        window.onclick=function(event){
+            if (event.target==button) {
+                let color= "#"
+                color += Math.random().toString(16).slice(2,8).toUpperCase();
+
+                back.style.backgroundColor = color;
+                label.innerText = color;
+            }
+        }
+    </script>
+</body>
