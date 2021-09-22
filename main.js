@@ -1,7 +1,7 @@
 
-window.onload = hello;
+window.onload = loadFunction;
 
-function hello() { 
+function loadFunction() { 
     // get by querySelector
     var back= document.querySelector("body");
     // get by id value
